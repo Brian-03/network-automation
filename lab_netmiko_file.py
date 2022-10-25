@@ -12,7 +12,7 @@ list_config=['int lo99',
 for router in data_router:
     router=router.split(',')
     router_dict={
-        'device_type': 'cisc_ios'if router[4].strip()=="ssh" else "cisco_ios_telnet",
+        'device_type': 'cisco_ios'if router[4].strip()=="ssh" else "cisco_ios_telnet",
         'host':router[0],
         'username':router[1],
         'password':router[2],
@@ -20,18 +20,24 @@ for router in data_router:
     }
 
     #koneksi ssh ke device
+    commands = []
+    command_files= open('configfile.csv','r').readlines()
+
+    for commandFile in command_files:
+        commands.append(commandFile.replace('\n',""))
 
     net_connect=ConnectHandler(**router_dict)
     net_connect.enable()
     output=net_connect.send_config_set(list_config)
     print(output)
+
     #export configuration
-    verif=net_connect.send_command('show run')
+    verif=net_connect.send_multiline(commands)
     save=open(f'ccna_{router[0]}.txt','w')
     save.write(verif)
     save.close()
 
+#user ssh privilage harus 15
 
-    #harus setting username cisco privilage 15#
 
 
