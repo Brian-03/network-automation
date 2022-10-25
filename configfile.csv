@@ -1,0 +1,32 @@
+ter leng 0 
+sh version
+sh run
+sh int status
+sh int desc
+sh ip int br
+sh vlan br
+sh cdp neigh
+sh cdp neigh det
+sh env all
+sh env
+sh inven
+sh vpc
+sh ip route
+sh ip bgp sum
+sh ip bgp nei
+sh ip eigrp nei
+sh ip ospf sum
+sh ip ospf nei
+sh proces cpu
+sh proces cpu sorted
+sh proces cpu hist 
+sh proces memory 
+sh proces memory sorted 
+sh redundancy 
+sh switch 
+sh stackwise-virtual 
+sh logging  
+sh ip bgp sum 
+dir all
+ter no leng 0
+
