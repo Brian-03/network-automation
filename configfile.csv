@@ -1,32 +1,46 @@
 ter leng 0 
-sh version
-sh run
-sh int status
-sh int desc
-sh ip int br
-sh vlan br
-sh cdp neigh
-sh cdp neigh det
-sh env all
-sh env
-sh inven
-sh vpc
-sh ip route
-sh ip bgp sum
-sh ip bgp nei
-sh ip eigrp nei
-sh ip ospf sum
-sh ip ospf nei
-sh proces cpu
-sh proces cpu sorted
-sh proces cpu hist 
-sh proces memory 
-sh proces memory sorted 
-sh redundancy 
-sh switch 
-sh stackwise-virtual 
-sh logging  
-sh ip bgp sum 
-dir all
-ter no leng 0
-
+show version 
+show run 
+show int status 
+show int desc 
+show ip int br 
+show vlan br 
+show cdp neigh 
+show cdp neigh det 
+show env all 
+show vtp status 
+show vtp password 
+show inven 
+show vpc 
+show ip route 
+show ip bgp sum 
+show ip bgp nei 
+show ip eigrp nei 
+show ip ospf sum 
+show ip ospf nei 
+show proces cpu 
+show proces cpu sorted 
+show proces cpu hist  
+show proces memory 
+show proces memory sorted 
+show redundancy 
+show switch 
+show stackwise-virtual 
+show logging 
+show ip bgp sum 
+dir all 
+show int status | i ted 
+show arp 
+show authentication sessions 
+show monitor session all 
+show etherchannel summary 
+show aaa server 
+show interfaces status | i connected 
+show mac address-table
+show arp vlan 1
+show arp vlan 2
+show arp vlan 4
+show arp vlan 5
+show arp vlan 9
+show arp vlan 6 
+ter no leng 0 
